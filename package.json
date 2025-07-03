@@ -1,0 +1,24 @@
+{
+  "name": "cookie",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run .",
+    "check": "biome check ./src",
+    "lint": "biome lint --error-on-warnings .",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "discord.js": "^14.21.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@tsconfig/bun": "^1.0.8",
+    "@types/bun": "latest",
+    "lefthook": "^1.11.16"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
