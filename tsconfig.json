@@ -2,6 +2,9 @@
   "extends": "@tsconfig/bun/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@helpers/*": ["src/helpers/*"],
+      "@types": ["src/types.d.ts"]
+    }
   }
 }

@@ -1,4 +1,6 @@
-import { Client, GatewayIntentBits } from 'discord.js'
+import { deployCommands } from '@helpers/deploy-commands'
+import { deployEvents } from '@helpers/deploy-events'
+import { Client, Collection, GatewayIntentBits } from 'discord.js'
 
 const client = new Client({
   intents: [
@@ -7,5 +9,9 @@ const client = new Client({
     GatewayIntentBits.GuildMembers
   ]
 })
+
+client.commands = new Collection()
+deployCommands(client)
+deployEvents(client)
 
 client.login(import.meta.env.TOKEN)
